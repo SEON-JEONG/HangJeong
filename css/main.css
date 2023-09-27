@@ -7,7 +7,7 @@
         font-style: normal;
     }
 
-body {background: #dcdcdc;  font-family:'SUITE-Regular',',Malgun Gothic','맑은고딕'; height: 3800; width: 100%; }
+body {background: white;  font-family:'SUITE-Regular',',Malgun Gothic','맑은고딕'; height: 3800; width: 100%; }
 
 #container {width: 800px; max-width: 1300px; min-width: 680px; margin: auto; background: white; height: 3800px;}
 
