@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+@font-face {
+        font-family: 'SUITE-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+body {background: #dcdcdc;  font-family:'SUITE-Regular',',Malgun Gothic','맑은고딕'; height: 3800; width: 100%; }
+
+#container {width: 800px; max-width: 1300px; min-width: 680px; margin: auto; background: white; height: 3800px;}
+
+header {position: fixed; top:0; left: 0; right: 0; width: 800px;      
+        margin: auto; background: white; z-index: 100;
+        border-bottom: 2px solid #ccc; box-shadow:1px 0px 6px 0px rgba(89,89,89,0.39);}
+
+
+
+.header_main > * {}
+.header_main {display: flex; 
+width: 800px; height: 70px; margin:10px 0;  }
+
+/* 헤더 왼쪽 */
+.header_left {width: 200px;}
+
+/* 헤더 로고 */
+.header_center {width:600px; position: relative; overflow: hidden;}
+.header_center a {position: relative; width: 158px;
+        margin:13px auto; box-sizing: border-box; display: block;   }
+.header_center img {position: absolute; width: 100%;}
+
+/* 헤더 오른쪽 */
+.header_right {width: 200px; display: flex;}
+/* 돋보기 버튼 */
+.header_search { width: 100px; text-align: center; padding:20px 0; padding-left: 60px;}
+.header_search img {width: 30px; height: 30px;}
+/* 햄버거 버튼 */
+.header_btn { width: 100px; text-align: center;  padding: 22px 0; padding-right:40px;}
+
+
+
+.header_search:hover, .header_btn:hover {filter: ;} 
+/*****************************************************************************/
+
+
+
+
+/* 자식에 display inlie block 하고 부모에 textalign center 해보기
+display: flex;justify-content: center; align-items: center; 이것도 */
+
+/* 검색창 */
+#serach_bar{width: 800px; position: relative; overflow: hidden; 
+        
+         height: 82px; margin-top: 20px; }
+
+.search_bar_div {position: relative; width: 700px; height: 77px; margin: auto;}
+
+.search_bar_div > input[type=text] {position: absolute; border: 3px solid #3382E9; border-radius: 15px;
+        width: 100%;  height: 75px; padding: 0 25px ;font-size: 19px;  }
+
+.search_bar_input:focus {background-color:#f6f8fa; outline: none; box-shadow: 10px 10px 43px -30px rgba(89,89,89,0.5);}
+
+
+/* 돋보기 버튼 */
+.search_bar_btn {position: absolute; top: 25px; width: 50px; right: 30px; 
+        bottom: 50px; background: transparent; cursor: pointer;transition: 0.2s ease-in; }
+
+.search_bar_btn:hover {transform: scale(1.1);} 
+
+
+/*****************************************************************************/
+
+
+
+main {padding-top: 110px; position:relative;}
+
+
+
+
+/*swiper 슬라이더*/
+#swiper_section {width: 800px; margin-top: 25px;}
+.swiper {width: 700px; border-radius: 15px;   }
+.swiper img {width: 100%; }
+
+
+.swiper-pagination-fraction {color: white; background: rgba(0,0,0,0.3);
+        width: auto; left:90%; bottom: 20px; top: auto;
+        padding: 0 7px; border-radius: 999px; font-size: 11px; line-height: 1.65;}
+
+.swiper-button-prev, .swiper-button-next {color:#3382E9; background: rgba(89,89,89,0.10);
+        width:50px ; height: 50px; border-radius: 50%;}
+
+.swiper-button-next:after,.swiper-button-prev:after {font-size: 25px; font-weight: 600;}
+/*****************************************************************************/
+
+
+
+/*민원신청*************************************************************************/
+#s1{position: relative;  height: 75px; margin-top: 40px; width: 800px;}
+
+.s1_wrap {position: relative; border: 3px solid #e3e3e3; margin: auto; width: 700px; height: 70px; border-radius: 15px; font-size: 20px; }
+.s1_wrap:hover {border: 3px solid #3382E9; border-radius: 15xp;}
+.s1_wrap img {position: absolute; left: 280px; top: 20px; width: 30px;}
+
+.s1_wrap button {width: 100%; height: 100%; background: transparent;}
+
+.s1_wrap button:hover {box-shadow: 20px 20px 43px -26px rgba(89,89,89,0.39); color: #3382E9;
+cursor: pointer;  }
+
+
+
+/*민원신청에 팝업모달*/
+
+.dark {position: fixed; background: rgba(0,0,0,0.8); z-index:500; inset: 0; display: none;}
+.s1_popup {
+        position: relative;
+        width: 650px; height: 600px; 
+        background: rgb(255, 255, 255); color: white; font-size: 2em;
+        justify-content: center; align-items: center; position: fixed; top: 50%; left: 50%;
+        transform: translate(-50%,-50%); z-index: 500; display: none; backdrop-filter: blur(5px);
+        border-radius: 15px; }
+
+.s1_popup h1 {position: absolute; top: 50px; left: 55px; font-size: 45px; font-weight: 600; color:#3382E9;} 
+
+.s1_wrap.active > .s1_popup {display: flex;}
+
+.sp_text {position: absolute; top: 209px;  }
+
+.sp_text textarea {width: 550px; height: 210px; font-size: 30px;
+         border: 2px solid #868686; border-radius: 10px; padding: 15px;}
+
+textarea:focus { outline:3px solid #3382E9; }
+
+.sp_text p {position: absolute; top: 225px; color: #3c3c3c; font-size: 25px;}
+
+.sp_text b {color: #DB2950;}
+
+.sp_close {position: absolute; top: 40px; margin-left: 365px; width: 10px; bottom: 250px; left: 200px; border: 2px solide red;}
+
+.sp_close i {font-size: 50px; color: #868686;}
+.sp_close i:hover {color: #DB2950;transform: scale(1.1); }
+
+.sp_btn {position: absolute; top: 510px;  border-radius: 10px; 
+        background: rgb(211, 211, 211); padding: 3px; }
+
+.sp_btn button {color: #ffffff; font-size: 35px; width: 100px; }
+.sp_btn button:hover {color: #3382E9; }
+.sp_btn:hover {background: #d6d6d6; transform: scale(1.1); }
+
+.sp_name {position: absolute; top: 128px; left: 48px; }
+.sp_name input {width: 272px; height: 55px; font-size: 30px; 
+        border:2px solid #868686; border-radius: 10px; padding: 0 18px;}
+input:focus { outline:3px solid #3382E9; }
+
+
+/**********************************************************************************/
+
+
+/*자주찾는서비스**************************************************************/
+#nav {position: relative;  height: 480px; margin-top: 20px; width: 100%; }
+
+.nav_wrap{position: relative;  margin: auto; width: 700px; 
+        height: 450px; }
+
+.nav_header h1 {font-size: 25px; font-weight: bold; padding: 10px 10px; color:#3382E9;}
+
+.nav_icon {position: relative; border: 3px solid #e3e3e3; margin: auto; width: 700px; 
+        height: 430px; border-radius: 15px; 
+        display: flex; flex-direction: row; flex-wrap: wrap; ;  }
+
+.nav_icon div {position: relative; display: block; border:3px solid #e3e3e3; width: 150px; height: 150px; border-radius: 15px;
+ margin: 30px 40px; transition: 0.3s ease-in; }
+
+ .nav_icon div:hover {border:3px solid #3382E9; box-shadow: 20px 20px 43px -26px rgba(89,89,89,0.39); color:#3382E9;
+        transform: scale(1.1)}
+
+.nav_icon span {position: absolute; left: 34px; top: 27px; 
+         width: 80px; height: 80px; }
+
+.nav_icon i {font-size: 50px; padding-left: 10px; padding-top: 10px; color: #DB2950;}
+.nav_icon i:hover {color: #fc6c8b;}
+
+
+.nav_icon p {position: absolute; left: 23px; top: 94px; 
+        width: 100px; height: 30px; margin: auto; text-align: center; padding: 5px;
+        font-size: 17px; font-weight: 800;}
+
+
+/***********************************************************************/
+
+
+
+
+/* 행정안전부 소식 */
+
+#s2 {position: relative; width: 800px;  height: 400px; margin-top: 25px;} /*섹션 1*/
+
+.s2_wrap {width: 700px;  margin: auto;  height: 350px; }
+
+.s2_head {font-size: 25px; font-weight: bold; padding: 10px 10px;}
+
+/* 상단 버튼들 */
+.s2_body {background: rgb(241, 241, 241); border-radius: 15px;} /*전체 바디*/
+
+.s2_btn {border: 3px solid #e3e3e3; height: 65px; border-radius: 15px;
+        display: flex; background: white;}
+
+.s2_btn > li {width: 100%;  border-left:3px solid #e3e3e3; 
+        text-align: center; padding-top: 21px;}
+
+.s2_btn > li:first-child {border: none}
+
+.s2_btn  a {font-size: 20px; }
+.s2_btn  a:hover {text-decoration:none; color: #3382E9;}
+
+.bar {position: absolute; top: 65px; left: 0; width: 0; 
+        height: 3px; background: #3382E9; transition: 0.3s ease-in; }
+
+
+
+
+
+/* 하단 글 ul */
+.s2_text {display: flex; border-radius: 15px; 
+border-top: none; }
+
+
+.s2_text_ul { margin-top: 15px; margin-left: 25px; 
+         height: 230px;} /*여기 마진은 텍스트 아래 마진*/
+
+.s2_text_ul  li {font-size: 20px; padding: 8px;  text-overflow: ellipsis; overflow: hidden;  white-space: nowrap; width: 380px; }
+
+.s2_text_ul  li:hover {text-decoration: underline; color: #3382E9;}
+
+/* 옆에 텍스트 이미지 */
+.s2_text_img {position: relative; width:260px;  margin: 20px; }
+
+.s2_text_img  img {position: absolute;  width: 100%; height: 190px;  border-radius: 10px;
+        transition: all 0.2s linear; margin-top: 10px; box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);}
+
+.s2_text_img  img:hover {transform: scale(1.1);transform: scale(1.1);}
+
+
+
+
+
+
+/* s3 포토뉴스 */
+#s3 {position: relative; width: 800px;  height: 450px;}
+
+.s3_wrap {width: 700px;  margin: auto;  height: 350px;}
+
+.s3_head {font-size: 25px; font-weight: bold; padding: 10px 10px ;}
+
+.s3_photo_wrap { border: 3px solid #e3e3e3; height: 370px; display: flex; border-radius: 15px; }
+
+.photo_wrap{ width: 300px; height: 200px; margin: auto; margin-top: 35px;  }
+
+.photo {width: 100%; height: 100%; overflow: hidden;border-radius: 15px; 
+        box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);}
+
+.photo_wrap img {width: 100%; height: 100%; 
+        border-radius: 15px; transition: all 0.2s linear; box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39); }
+
+.photo_wrap img:hover {transform: scale(1.1)}
+
+.photo_wrap p {margin-top: 20px; padding: 5px; font-size: 18px; font-weight: bold; margin-bottom: 13px; cursor: pointer;}
+
+.photo_wrap p:hover {text-decoration: underline; color:#3382E9;}
+
+.photo_wrap span {font-size: 16px; color: #959595; cursor: pointer;}
+/******************************************************************/
+
+
+
+
+
+/*열린 장관실*/
+
+#s4 {width: 800px; height: 410px; margin-top: 25px;}
+
+.s4_wrap {position: relative; height: 400px;  overflow: hidden;}
+.s4_wrap img {position: absolute; width: 900px; height: 400px; }
+
+/* 안전한 국민 살기좋은나라 부분 */
+.s4_text {position: absolute;  width: 400px; margin: 70px 30px; 
+padding: 20px; }
+
+.s4_text h1 {font-size: 50px; margin-bottom: 30px; font-weight:600;}
+
+.s4_text p {font-size: 30px; color: #3382E9; font-weight: 500;}
+
+
+.s4_btns {position: absolute; top: 280px; left: 30px; }
+
+.s4_btns button { width: 180px; height: 60px; font-size: 25px; 
+         border-radius: 10px; margin: 8px; cursor: pointer; }
+.s4_btn1 {background: rgb(31, 146, 253); color: white; transition: 0.3s ease-in; }
+.s4_btn1:hover {background: rgb(0, 103, 199);transform: scale(1.1); }
+.s4_btn2 {background: rgb(24, 85, 253); color: white; transition: 0.3s ease-in; }
+.s4_btn2:hover {background:  rgb(12, 61, 197); transform: scale(1.1)}
+
+
+/************************************************************************************/
+
+
+
+
+/*유튜브 부분***************************************************************/
+#s5 {width: 800px;  height: 530px; margin-top: 25px;}
+
+.s5_wrap{width: 700px;  margin: auto;  height: 520px; }
+
+.s5_header {font-size: 25px; font-weight: bold; padding: 10px 10px ;}
+
+.s5_youtube_wrap {border: 3px solid #e3e3e3; border-radius: 15px;}
+
+.s5_youtube {margin: 20px; border-radius: 15px; ;overflow: hidden;}
+/************************************************************************************/
+
+
+
+
+
+/****알림판*******************************************/
+#s6 {width: 800px;  height: 470px; margin-top: 10px;}
+.s6_wrap {width: 700px;  margin: auto;  height: 520px;}
+.s6_header {font-size: 25px; font-weight: bold; padding: 10px 10px ;}
+#swiper_section2 
+
+
+/*****************************************************************************/
+
+/*푸터*********************************************************/
+footer {width: 800px;}
+
+.footer_wrap { margin-top: 30px; position: relative;}
+
+.footer_div1 {background: #3c3c3c; height: 60px; }
+.footer_div1 ul {display: flex; justify-content: center;
+padding: 9px 0;}
+
+.footer_div1>ul>li {padding: 13px; font-size: 20px; font-weight: 500;
+                    color: white;  display: inline-block;}
+
+.footer_div1>ul>li:hover {color: #a1c7f8;}
+
+
+
+.footer_div2 {background: #626262; padding: 25px 0;}
+
+.footer_div2 p {padding: 10px 20px; color: white; font-size: 17px;}
+
+.footer_div2 address {padding: 5px 20px; color: rgb(200, 200, 200);}
+
+.footer_div3 {position: absolute; top: 230px; left: 690px;  width: 100px;}
+
+/****************************************************************/
+.familySite_wrap { float:right; position: relative; bottom: 10px; }
+.familySite_wrap select {
+  font-size:20px;
+  width:170px; padding:0 10px; 
+  height: 35px;
+  appearance:none;
+  background:#fff url('../img/icon_snb_arr.png') no-repeat right center;
+}
+
+
+
+
+/*H1 폰트사이즈는 25px*/
+/*border: 2px solid rgb(184, 184, 184);*/
+/*box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);*/

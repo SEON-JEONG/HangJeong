@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행정안전부</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+
+<body>
+<div id="container">
+<header class="on">
+    <div class="header_main">
+
+        <!-- 헤더 왼쪽 빈여백 -->
+        <div class="header_left">
+            
+        </div>
+
+        <!-- 헤더 중앙 로고 -->
+        <div class="header_center">
+            <a href="#">
+            <img src="img/logo.png" alt="행정 안전부 로고">
+            </a>
+        </div>
+
+        <!-- 헤더 오른쪽 햄버거 버튼 -->
+        <div class="header_right">
+            <!-- 돋보기 -->
+            <div class="header_search">
+                <a href="#">
+                    <img src="img/icon_login.png" alt="">
+                </a>
+            </div>
+            <!-- 햄버거버튼 -->
+            <div class="header_btn">
+                <a href="#">
+                    <img src="img/menu_icon.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+<main>
+<!-- 검색창 -->
+<section id="serach_bar">
+
+    <div class="search_bar_div">
+        <input onkeyup="enterkey();" type="text" class="search_bar_input" placeholder="찾으시는 서비스를 입력하세요">
+
+        
+        <button class="search_bar_btn" id="form">
+            <a href="https://www.mois.go.kr/srch.jsp">
+            <img src="img/search_ico_blue.png" alt="search_ico_blue">
+            </a>
+        </button>
+    </div>
+</section>
+
+
+
+
+
+<!-- S1) 슬라이더 -->
+<!-- Slider main container -->
+<section id="swiper_section">
+<div class="swiper">
+    
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        
+        <!-- Slides -->
+        <div class="swiper-slide"><a href="https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=103734" target="_blank"><img src="img/slider1.png" alt=""></a></div>
+        <div class="swiper-slide"><a href="https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=103732" target="_blank"><img src="img/slider2.png" alt=""></a></div>
+        <div class="swiper-slide"><a href="https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=103740" target=""><img src="img/slider3.png" alt=""></a></div>
+    </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
+</section>
+
+
+
+<!-- 민원신청 ----------------------------------------------------------------------------->
+<div class="dark"></div>
+<section id="s1">
+    
+    <div class="s1_wrap">
+        <button>
+            <a href="#"><img src="img/minwon.png" alt="">민원신청</a>
+        </button>
+        <!-- 스크립트 팝업 모달 -->
+        
+        <div class="s1_popup">
+            <h1>문의사항</h1>
+            <div class="sp_close">
+                <a href="#">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+
+            <div class="sp_name">
+                <input type="text" name="이름" id="" placeholder="이름">
+                <input type="number" name="전화번호" id="" placeholder="전화번호">
+            </div>
+
+            <div class="sp_text">
+                <textarea name="a" id="" cols="25" rows="8" placeholder="문의사항을 적어주세요!"></textarea>
+                <p>상당시간은 <b>09:00 ~ 18:00</b> 까지이며 <br> 순서대로 문자로 안내드립니다. </p>
+            </div>
+
+            <div class="sp_btn">
+                <button >
+                    접수
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+</section>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+<!-- 자주찾는서비스 ----------------------------------------------------------------------------->
+<section id="nav">
+<div class="nav_wrap">
+    <div class="nav_header">
+        <h1>자주찾는 서비스</h1>
+    </div>
+
+    <div class="nav_icon">
+
+        <div>
+            <a href="https://www.mois.go.kr/plan2023/main.html" target="_blank">
+                <span><i class="fa-regular fa-rectangle-list"></i></span>
+                <p>업무계획</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="https://www.mois.go.kr/frt/sub/a05/reSafetySystem/screen.do"target="_blank">
+                <span><i class="fa-regular fa-handshake"></i></span>
+                <p>국가안전<br>시스템개편</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="https://www.safekorea.go.kr/idsiSFK/neo/main/main.html"target="_blank">
+                <span><i class="fa-regular fa-hospital"></i></span>
+                <p>국민재난<br>안전포털</p>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.gov.kr/portal/main/nologin"target="_blank">
+                <span><i class="fa-regular fa-newspaper"></i></i></span>
+                <p>정부24</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="https://www.mois.go.kr/frt/a07/searchStaff.do"target="_blank">
+                <span><i class="fa-regular fa-id-card"></i></span>
+                <p>직원검색</p>
+            </a>
+        </div>
+
+        <div>
+            <a href="https://gwanbo.go.kr/main.do"target="_blank">
+                <span><i class="fa-regular fa-rectangle-list"></i></span>
+                <p>전자관보</p>
+            </a>
+        </div>
+    </div>
+
+</div>
+</section>
+<!--------------------------------------------------------------------------------------->
+
+
+<!-- S2) 행정 안전부 소식 -->
+<section id="s2">
+<div class="s2_wrap">
+
+    <!-- 행정부소식 헤더 -->
+    <div class="s2_head">
+        <h1>행정안전부 소식</h1>
+    </div>
+
+    <div class="s2_body">
+        <!-- 상단 버튼 ul -->
+        <div>
+            <ul class="s2_btn">
+                <li><a href="#">알립니다</a></li>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">훈령·예규·고시</a></li>
+                <li><a href="#">더보기</a></li>
+                <span class="s2_bar"></span>
+            </ul>
+        </div>
+
+
+        <!-- 하단 글 ul -->
+        <div class="s2_text">
+            <div >
+                <ul class="s2_text_ul">
+                    <li><a href="#">- 행정안전부 임기제공무원 채용시험 공고</a>
+                    </li>
+                    <li><a href="#">- 재해경감 우수기업 인증 공고</a>
+                    </li>
+                    <li><a href="#">- 2023년 지방재정발전유공 정부포상 후보자 공개검증</a>
+                    </li>
+                    <li><a href="#">- 2023 공공 마이데이터 홍보콘텐츠 공모전</a>
+                    </li>
+                    <li><a href="#">- AI 공문서 시범서비스 개발 참여기업 추가모집 공고</a>
+                    </li>
+                    <li><a href="#">- 2023년 지역균형발전 및 지역활성화 유공 정부포상</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="s2_text_img">
+                <a href="#">
+                    <img src="img/33.JPG" alt="">
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</section>
+<!----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+<!-- 사진뉴스--------------------------------------------------------------------->
+<section id="s3">
+<div class="s3_wrap">
+<!--사진뉴스 헤더 -->
+<div class="s3_head">
+<h1>사진 뉴스</h1>
+</div>
+
+<!--사진뉴스 사진 두개 div -->
+<div class="s3_photo_wrap">
+
+    <div class="photo_wrap">
+        <div class="photo">
+        <a href="https://www.mois.go.kr/frt/bbs/type002/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000010&nttId=103838" target="_blank">
+            <img src="img/photo_news1.JPG" alt="">
+        </a>
+        </div>
+        <p>고기동 차관, '긴급 시·도 부단체장 회의'</p>
+        <span>고기동 차관, '인구감소지역 시장·군수·구청장 협의회 창립총회 및 출범식' 참석</span>
+    </div>
+
+    <div class="photo_wrap">
+
+        <div class="photo">
+        <a href="https://www.mois.go.kr/frt/bbs/type002/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000010&nttId=103787" target="">
+            <img src="img/photo_news2.JPG" alt="">
+        </a>
+        </div>
+
+        <p>재난안전관리본부장, 서문시장 안전점검</p>
+        <span>이한경 재난안전관리본부장, 추석 연휴 안전관리대책 점검 회의 주재</span>
+    </div>
+</div>
+</div>
+</section>
+<!----------------------------------------------------------------------------- -->
+
+<!-- 열린 장관실--------------------------------------------------------------------->
+
+<section id="s4">
+<div class="s4_wrap">
+    <div>
+        <a href="#"><img src="img/main_photo.jpg" alt=""></a>
+    </div>
+    
+    <div class="s4_text">
+        <h1>안전한 국민<br>살기 좋은 나라</h1>
+        <p>행정안전부 장관 이상민</p>
+    </div>
+
+    <div class="s4_btns">
+        <button class="s4_btn1">
+            <a href="https://www.mois.go.kr/mns/sub/a02/ministerGreeting/screen.do" target="_blank">
+                장관 인사말
+            </a>
+        </button>
+
+        <button class="s4_btn2">
+            <a href="https://www.mois.go.kr/mns/sub/a05/conversation/screen.do" target="_blank">
+            장관과의 대화
+            </a>
+        </button>
+    </div>
+
+    
+</div>
+</section>
+<!----------------------------------------------------------------------------- -->
+
+
+
+<!-- 유튜브--------------------------------------------------------------------->
+<section id="s5">
+<div class="s5_wrap">
+    <div class="s5_header">
+        <h1>유튜브(Youtube)</h1>
+    </div>
+<div class="s5_youtube_wrap">
+    <div class="s5_youtube">
+        <iframe width="670" height="400" src="https://www.youtube.com/embed/5dHMAza0XdU?si=AbVpmyfR__q1tout" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+
+</div>
+</section>
+<!----------------------------------------------------------------------------- -->
+
+
+<!--알림판------------------------------------------------------------------>
+<section id="s6">
+    <div class="s6_wrap">
+        <div class="s6_header">
+            <h1>알림판</h1>
+        </div>
+
+<section id="swiper_section2">
+<div class="swiper">
+    
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        
+        <!-- Slides -->
+        <div class="swiper-slide"><a href="https://www.mois.go.kr/html/taegeukgi/10.html" target="_blank"><img src="img/aram1.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="https://www.mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=103451" target="_blank"><img src="img/aram2.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="https://www.eshare.go.kr/UserPortal/cms/article/view.do?bbsNo=20&bbatclSeq=1904" target="_blank"><img src="img/aram3.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="https://onoffmix.com/event/284624" target="_blank"><img src="img/aram4.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="https://www.pa.go.kr/online_contents/exhibition/2023/exhibition202309_01.jsp" target="_blank"><img src="img/aram5.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="https://www.police.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn=20230426100136324&q_tab=#" target="_blank"><img src="img/aram6.jpg" alt=""></a></div>
+
+
+    </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
+    </div>
+
+</section>
+<!----------------------------------------------------------------------------- -->
+
+
+<!--푸터 배너------------------------------------------------------------------>
+<section id="s7">
+    <div class="s7_wrap">
+        
+
+    </div>
+
+</section>
+<!----------------------------------------------------------------------------- -->
+
+ </main>
+
+<footer>
+<div class="footer_wrap">
+    <div class="footer_div1">
+        <ul>
+            <li><a href="https://www.mois.go.kr/frt/sub/a08/personalInfo/screen.do" target="_blank" >개인정보처리방침</a></li>
+            <li><a href="https://www.mois.go.kr/frt/sub/a08/useInfo/screen.do" target="_blank">이용약관</a></li>
+            <li><a href="https://www.mois.go.kr/frt/sub/a08/copyrightPolicy/screen.do" target="_blank">보안센터</a></li>
+            <li><a href="https://www.mois.go.kr/frt/a07/searchStaff.do" target="_blank">담당연락처</a></li>
+            <li><a href="https://www.mois.go.kr/frt/sub/a07/map/screen.do" target="_blank">찾아오시는길</a></li>
+            <li>
+                <div class="familySite_wrap">
+                <select id="familySite" onChange="location.href=this.value">
+                <option value="">SNS 바로가기</option>
+                <option value="https://www.facebook.com/withyou3542">페이스북</option>
+                <option value="https://twitter.com/withyou3542">트위터(X)</option>
+                <option value="https://blog.naver.com/mopaspr">네이버 블로그</option>
+                <option value="https://www.youtube.com/withyou3542">유튜브</option>
+                <option value="https://www.instagram.com/withyou3542/">인스타그램</option>
+                <option value="https://pf.kakao.com/_EIZsxd">카카오톡 채널</option>
+                </select>
+            </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer_div2">
+        <p>30112 세종특별자치시 도움6로 42(어진동) / 30116 세종특별자치시 가름로 143(어진동)</p>
+        <br>
+        <p>정부민원안내콜센터 국번없이110(무료), 행정안전부 콜센터 02-2100-3399(월~금 9:00~18:00, 공휴일 제외) / 팩스 044-204-8911</p>
+        <br>
+        <p>(근무시간 외) 당직실 044-205-1600</p>
+        <br>
+        <address>© Ministry of the Interior and Safety. All rights reserved.</address>
+    </div>
+
+    <div class="footer_div3">
+        <a href="#">
+            <img src="img/2023_wa.png" alt="">
+        </a>
+    </div>
+</div>
+</footer>
+</div> <!--컨테이너 디브-->    
+
+</body>
+</html>
